@@ -506,6 +506,7 @@ section {
     text-align: right;
   }
   .design__card-info-title {
+    font-size: 2.4rem;
     margin: 1em 0;
   }
   .section__hero-img {
