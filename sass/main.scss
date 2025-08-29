@@ -278,7 +278,7 @@ section {
 	background-image: url('../img/herosmall.jpg');
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
+	background-attachment: scroll;
 
 	&-bg {
 		position: absolute;
@@ -586,6 +586,7 @@ section {
 	.section__hero-img {
 		padding: 10em;
 		background-image: url('../img/herobig.jpg');
+		background-attachment: fixed;
 
 		&-title {
 			font-size: 2.8rem;
