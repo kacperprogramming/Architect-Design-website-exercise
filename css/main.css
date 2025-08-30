@@ -48,6 +48,10 @@ nav.scrolled .navbar__item {
   color: black; /* wszystkie elementy na czarno */
 }
 
+nav.scrolled .navbar__item::before {
+  background-color: #000;
+}
+
 nav.scrolled .navbar__burger span {
   background: black; /* burger też na czarno */
 }
@@ -76,7 +80,7 @@ section {
   justify-content: flex-end;
   align-items: center;
   color: #fff;
-  padding: 20px;
+  padding: 1.5em;
 }
 .navbar a {
   text-decoration: none;
@@ -107,12 +111,24 @@ section {
   margin-right: auto;
 }
 .navbar__item {
+  position: relative;
   font-size: 2rem;
   margin-left: 2em;
   display: none;
 }
-.navbar__item:hover {
-  text-decoration: underline;
+.navbar__item::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s;
+  transform: scaleX(0);
+}
+.navbar__item:hover::before {
+  transform: scaleX(1);
 }
 
 .nav-mobile {
@@ -132,16 +148,30 @@ section {
   left: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transform: translate(-50%, -50%);
 }
 .nav-mobile-item {
+  position: relative;
   text-decoration: none;
   color: #000;
   margin-top: 2em;
   font-size: 2.8rem;
 }
-.nav-mobile-item:hover {
-  text-decoration: underline;
+.nav-mobile-item::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #000;
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.nav-mobile-item:hover::before {
+  width: 100%;
 }
 
 .active {
@@ -585,7 +615,14 @@ section {
     padding: 5em 0;
     width: 100%;
   }
+  .offers__card:nth-child(2) {
+    transform: scale(1.1);
+  }
   .offers__card-title {
     font-size: 3.2rem;
+  }
+  .offers__cards > .offers__card:nth-child(2) > .offers__card-button {
+    background-color: #000;
+    color: #fff;
   }
 }/*# sourceMappingURL=main.css.map */
