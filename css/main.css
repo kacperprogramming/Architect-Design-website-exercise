@@ -418,6 +418,7 @@ section {
   align-self: flex-start;
   transition: 0.3s;
   color: #000;
+  font-family: "Montserrat", sans-serif;
 }
 .contact__form-box-btn:hover {
   background-color: #000;
