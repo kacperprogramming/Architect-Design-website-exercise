@@ -1,11 +1,11 @@
-// Pobieramy elementy
-const nav = document.querySelector('.nav') // nawigacja
-const navMobile = document.querySelector('.nav-mobile') // nawigacja mobilna
+const nav = document.querySelector('.nav') 
+const navMobile = document.querySelector('.nav-mobile')
 const navMobileLinks = document.querySelectorAll('.nav-mobile-item')
-const burger = document.querySelector('.navbar__burger') // burger
-const navItems = document.querySelectorAll('.navbar__item') // linki w nav
+const burger = document.querySelector('.navbar__burger') 
+const navItems = document.querySelectorAll('.navbar__item') 
 const brand = document.querySelector('.navbar__brand')
 const burgerBar = document.querySelectorAll('.navbar__burger-bar')
+const footerYear = document.querySelector('.footer__year')
 
 // Funkcja zmieniająca tło i kolory po scrollu
 window.addEventListener('scroll', () => {
@@ -18,14 +18,14 @@ window.addEventListener('scroll', () => {
 
 // Toggle menu mobilnego
 burger.addEventListener('click', () => {
-	navItems.forEach(item => item.classList.toggle('active')) // dodaje klasę active do linków
-	burger.classList.toggle('active') // możesz użyć do animacji burgera
+	navItems.forEach(item => item.classList.toggle('active'))
+	burger.classList.toggle('active')
 })
 
 brand.addEventListener('click', e => {
 	e.preventDefault() // zatrzymuje domyślne przewijanie
 	window.scrollTo({
-		top: 0, // przewija na samą górę
+		top: 0,
 		behavior: 'smooth',
 	})
 })
@@ -57,9 +57,15 @@ navMobileLinks.forEach(link => {
 	})
 })
 
+// nawigacja zawsze na 100% vh na telefonach
+
 function setNavHeight() {
 	navMobile.style.height = `${window.innerHeight}px`
 }
 
 window.addEventListener('resize', setNavHeight)
 window.addEventListener('load', setNavHeight)
+
+// automatyczna data w footerze
+
+footerYear.textContent = new Date().getFullYear();

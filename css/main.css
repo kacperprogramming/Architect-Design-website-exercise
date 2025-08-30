@@ -329,6 +329,7 @@ section {
 }
 
 .offers {
+  overflow: hidden;
   background-color: #fff;
 }
 .offers__cards {
@@ -442,7 +443,7 @@ section {
 }
 
 .newsletter {
-  background-color: #14213d;
+  background-color: #000;
 }
 .newsletter__box {
   display: flex;
@@ -451,7 +452,7 @@ section {
   color: #fff;
 }
 .newsletter__box-title {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   margin-bottom: 0em;
 }
 .newsletter__box-input {
@@ -462,19 +463,20 @@ section {
   margin: 1em 0;
 }
 .newsletter__box-btn {
-  background: #fff;
-  border: none;
+  background: #000;
+  border: 1px solid #fff;
   padding: 1em 4em;
+  margin-top: 0.5em;
   align-self: center;
-  color: #000;
+  color: #fff;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
   font-family: "Montserrat", sans-serif;
 }
 .newsletter__box-btn:hover {
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 
 .footer {
@@ -484,7 +486,7 @@ section {
   color: #fff;
   font-size: 1.8rem;
   padding: 2em;
-  background-color: rgb(10, 23, 51);
+  background-color: rgb(0, 0, 0);
 }
 
 @media (min-width: 350px) {
