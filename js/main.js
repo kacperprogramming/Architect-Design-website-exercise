@@ -56,3 +56,10 @@ navMobileLinks.forEach(link => {
 		})
 	})
 })
+
+function setNavHeight() {
+	navMobile.style.height = `${window.innerHeight}px`
+}
+
+window.addEventListener('resize', setNavHeight)
+window.addEventListener('load', setNavHeight)
